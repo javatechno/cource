@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+
 
 
 import math
@@ -10,7 +10,7 @@ W = np.array([[1, 1], [1, -1]],int)
 p = (15, 11, 4, 1, 3, 15, 5, 9, 0, 10, 14, 7, 6, 8, 2, 15)
 
 
-# In[3]:
+
 
 
 # Матрица Адамара-Сильвестра
@@ -21,7 +21,7 @@ def hadamard_matrix(dimension):
         return np.hstack((np.vstack((hadamard_matrix(dimension-1),hadamard_matrix(dimension-1))),np.vstack((hadamard_matrix(dimension-1),-hadamard_matrix(dimension-1)))))
 
 
-# In[4]:
+
 
 
 # Получение массива значений функций
@@ -34,7 +34,7 @@ def function_value(function):
     return values
 
 
-# In[5]:
+
 
 
 # Генерирует все мономы в лексикографическом порядке
@@ -51,7 +51,7 @@ def generate_monoms(n):
     return(monoms)
 
 
-# In[6]:
+
 
 
 # Вывод значений функции в нормальном виде
@@ -73,7 +73,7 @@ def builds_function(function):
     return(answer)
 
 
-# In[7]:
+
 
 
 # Многочлен Жегалкина
@@ -90,7 +90,7 @@ def anf(function):
     return ANF
 
 
-# In[8]:
+
 
 
 # Коэффцициенты Фурье
@@ -103,7 +103,7 @@ def fourier_spectrum(function):
     return spectrum
 
 
-# In[9]:
+
 
 
 # Коэффициенты Уолша-Адамара
@@ -117,7 +117,7 @@ def walsch_spectrum(function):
     return spectrum
 
 
-# In[10]:
+
 
 
 # Задание 5 - строгий лавинный критерий
@@ -134,7 +134,7 @@ def strict_avalanche_test(function):
     return var
 
 
-# In[11]:
+
 
 
 # Задание 6
@@ -152,7 +152,7 @@ def bit_independence_criterion(function):
     return var,g
 
 
-# In[12]:
+
 
 
 # Задание 7 - лавинный критерий
@@ -169,7 +169,7 @@ def avalanche_test(function):
     return var
 
 
-# In[13]:
+
 
 
 print("Значения разрядных функций:")
@@ -190,7 +190,7 @@ print("Лавинный критерий:")
 print(np.array(avalanche_test(p)), end="\n\n")
 
 
-# In[ ]:
+
 
 
 
